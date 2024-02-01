@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Cristiano Miranda's Bootstrap Grid Project - Email Interface</title>
+
+    <!-- Links the Bootstrap CSS stylesheet. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+
+    <!-- Links the bootstrap-email-miranda-stylesheet.css stylesheet. -->
+    <link rel="stylesheet" href="./bootstrap-email-miranda-stylesheet.css">
+
+</head>
+<body>
+    <!-- Things to do:
+        Add the menu button
+        Finish adding the elements
+        Experiment more with bootstrap options
+        Figure out how to use visibility setting
+        Make website more adaptive
+    -->
+
+
+    <div class="fluid-container main-page">
+
+        <!-- This is the header container, as of now it is set to create a row wit two columns 
+            that creates a space in between the textbox and title. -->
+        <div class="row justify-content-between row-cols-3 header">
+                <!-- Try and find a way to include the menu button -->
+            <!-- Displays the website's title -->
+            <h1 class="row-sm header" id="website-title">Email Website Title</h1>
+            <!-- Displays the website's search bar -->
+            <input class="row" id="search-bar" type="text">
+        </div>
+
+        <div class="options-menu"></div>
+        
+        <div class="email-list"></div>
+
+        <div class="email-display"></div>
+
+
+    </div>
+
+</body>
+</html>

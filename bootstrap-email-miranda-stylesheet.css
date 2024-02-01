@@ -1,0 +1,61 @@
+/* This is the style sheet for my Bootstrap Grid Project - Email Interface */
+
+.main-page {
+    /* Sets the basic design choices of the webpage */
+    height: 100vh;
+    width: 100vw;
+    min-width: 390px;
+    overflow: hidden;
+
+    /* Change this to a variable for color */
+    background-color: rgb(61, 50, 50); 
+    color: white;
+}
+
+#website-title {
+    font-size: 30px;
+
+    /* Set the width to 50% of the viewport */
+    width: 50vw;
+
+    /* Sets a default height of 40px and a max height of 80px */
+    height: 40px;
+    max-height: 80px;
+
+    /* Set a margin to the left and right*/
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+#search-bar {
+    /* Set the width to 50% of the viewport */
+    width: 45vw;
+
+    /* Sets a default height of 40px and a max height of 80px */
+    height: 40px;
+    max-height: 80px;
+
+    /* Set a margin to the left, right, and top*/
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+/* Media Query to check when viewport gets below a certain width */
+@media (max-width: 600px) {
+    #website-title {
+        /* Changes font-size of the title to 40px to fill the extra space */
+        font-size: 40px;
+
+        /* Sets the search bar to take up 100% of the available  */
+        width: 100%;
+
+        /* Aligns text to the center of the screen */
+        text-align: center;
+    }
+    #search-bar {
+        /* Sets the search bar to take up 100% of the available width */
+        width: 100%;
+    }
+}
