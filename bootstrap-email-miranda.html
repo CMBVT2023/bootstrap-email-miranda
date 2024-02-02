@@ -14,7 +14,6 @@
 
     <!-- Links the bootstrap-email-miranda-stylesheet.css stylesheet. -->
     <link rel="stylesheet" href="./bootstrap-email-miranda-stylesheet.css">
-
 </head>
 <body>
     <!-- Things to do:
@@ -23,29 +22,106 @@
         Experiment more with bootstrap options
         Figure out how to use visibility setting
         Make website more adaptive
+
+        Future Plans:
+        Use Offcanvas to create the menu-options 
+        Look into flex to create the header as that might have more options
     -->
 
 
-    <div class="fluid-container main-page">
+    <div class="container-fluid main-page">
+        
+        <!-- This is the header container, all elements within this container have an additional class
+            called "header" to allow them all to be referenced at once in the CSS file. -->
 
-        <!-- This is the header container, as of now it is set to create a row wit two columns 
-            that creates a space in between the textbox and title. -->
-        <div class="row justify-content-between row-cols-3 header">
-                <!-- Try and find a way to include the menu button -->
-            <!-- Displays the website's title -->
-            <h1 class="row-sm header" id="website-title">Email Website Title</h1>
-            <!-- Displays the website's search bar -->
-            <input class="row" id="search-bar" type="text">
+            <!-- Class declarations:
+            -row allows this element to utilize row classes
+            -justify-content-start aligns all elements to the left of the page
+            -align-content-center aligns all elements to the center of the container
+            -gap-2 creates a vertical gap between elements
+            -g-0 removes the gutter that is applied by default between elements  -->
+        <div class="row justify-content-start align-content-center gap-2 g-0 header">
+
+            <!-- Container for the menu button and its various options.
+            Class declarations: 
+                -col-2 makes this element take up 2 column spaces in the container
+                -col-md-1 makes this element take up 1 column space in the container if the medium breakpoint is active
+                -col-sm-1 makes this element take up 1 column space in the container if the small breakpoint is active
+                -order-sm-1 orders this element 1st in the container if the small breakpoint is active
+                -order-md-1 orders this element 1st in the container if the medium breakpoint is active
+                -d-lg-none makes this element invisible if the large breakpoint is active 
+                -dropdown allows the div to house a dropdown menu button and its elements-->
+                <div class="col-2 col-md-1 order-sm-1 order-md-1 d-lg-none align-self-center dropdown">
+                    <!-- Displays the menu button within the container.
+                    Class declarations: 
+                        -btn allows this element to utilize button classes
+                        -btn-dark declares this button element to utilize a pre-made dark design
+                        -dropdown-toggle sets this button to open a toggle menu when clicked -->
+                    <button class="btn btn-dark dropdown-toggle" type="button" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                    </button>
+                    <!-- Displays the dropdown menu elements
+                    Class declarations:
+                        -dropdown-item makes the element an option in the dropdown menu
+                        -dropdown-divider creates a divider visual in the dropdown menu -->
+                    <ul class="dropdown-menu" aria-labelledby="menu">
+                        <li><a class="dropdown-item" href="#">Inbox</a></li>
+                        <li><a class="dropdown-item" href="#">Sent</a></li>
+                        <li><a class="dropdown-item" href="#">Drafts</a></li>
+                        <li><a class="dropdown-item" href="#">Spam</a></li>
+                        <li><a class="dropdown-item" href="#">Trash</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Compose</a></li>
+                    </ul>
+                </div>
+            
+            <!-- Displays the website's title.
+            Class declarations:
+                -col-9 makes this element take up 9 column spaces in the container
+                -col-md-6 makes this element take up 6 column spaces in the container if the medium breakpoint is active
+                -col-lg-5 makes this element take up 5 column spaces in the container if the large breakpoint is active
+                -order-sm-2 orders this element 2nd in the container if the small breakpoint is active
+                -order-md-3 orders this element 3rd in the container if the medium breakpoint is active
+                -order-lg-2 orders this element 2nd in the container if the large breakpoint is active
+                -text-center centers the text on screen -->
+            <h1 class="col-9 col-md-5 col-lg-5 order-sm-2 order-md-3 order-lg-2 text-center header" id="website-title">Email Website Title</h1>
+            
+            <!-- Displays the website's search bar.
+            Class declarations:
+                -col-12 makes this element take up 12 column spaces in the container
+                -col-md-4 makes this element take up 4 column spaces in the container if the medium breakpoint is active
+                -col-lg-5 makes this element take up 5 column spaces in the container if the large breakpoint is active
+                -order-sm-3 orders this element 3rd in the container if the small breakpoint is active
+                -order-md-2 orders this element 2nd in the container if the medium breakpoint is active
+                -order-lg-1 orders this element 1st in the container if the large breakpoint is active
+                -align-self-center aligns the element to the center of its container (used to control the size of the searchbar) 
+                -ms-md-3 creates a margin with a value of 3 if the medium breakpoint is active-->
+            <input class="col-12 col-md-4 col-lg-6 order-sm-3 order-md-2 order-lg-1 align-self-center ms-md-3 header" id="search-bar" type="text">
         </div>
 
         <div class="options-menu"></div>
         
-        <div class="email-list"></div>
+        <!-- <div class="row email-list">
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+            <p class="email-list">Various Email</p>
+
+        </div> -->
 
         <div class="email-display"></div>
 
+        
 
     </div>
-
+    
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
