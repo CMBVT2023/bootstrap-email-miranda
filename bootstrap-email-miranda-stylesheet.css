@@ -5,6 +5,7 @@
     height: 100vh;
     width: 100vw;
     min-width: 390px;
+
     overflow: hidden;
 
     /* Change this to a variable for color */
@@ -12,8 +13,20 @@
     color: white;
 }
 
-.email-list {
-    background-color: black;
-    width: 20vw;
-    height: 5vw;
+.email-list-display {
+    max-height: 90vh;
+}
+
+#composeBTN {
+    margin-bottom: 10px;
+}
+
+#reply, #forward {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+#email-display {
+    background-color: white;
+    color: black;
 }

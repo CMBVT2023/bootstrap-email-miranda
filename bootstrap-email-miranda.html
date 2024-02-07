@@ -17,24 +17,23 @@
 </head>
 <body>
     <!-- Things to do:
-        Add the menu button
-        Finish adding the elements
-        Experiment more with bootstrap options
-        Figure out how to use visibility setting
-        Make website more adaptive
-
-        Future Plans:
-        Use Offcanvas to create the menu-options 
-        Look into flex to create the header as that might have more options
+        Add images to search and the compose reply and forward buttons
+        Fit Email Display Area to its entire column
+        Add text to various emails in the list
+            At least three have to have be completed, ie have a sender, a message, a subject, and a title while in the list
+        
+        Add badges to the option-menu buttons
+        Add a modal that activates after the compose or reply buttons are pressed
+        
+        
     -->
 
 
-    <div class="container-fluid main-page">
-        
-        <!-- This is the header container, all elements within this container have an additional class
-            called "header" to allow them all to be referenced at once in the CSS file. -->
+    <div class="container-fluid overflow-hidden main-page">
 
-            <!-- Class declarations:
+            <!-- This is the header container, all elements within this container have an additional class
+                    called "header" to allow them all to be referenced at once in the CSS file.
+                Class declarations:
             -row allows this element to utilize row classes
             -justify-content-start aligns all elements to the left of the page
             -align-content-center aligns all elements to the center of the container
@@ -70,8 +69,6 @@
                         <li><a class="dropdown-item" href="#">Drafts</a></li>
                         <li><a class="dropdown-item" href="#">Spam</a></li>
                         <li><a class="dropdown-item" href="#">Trash</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Compose</a></li>
                     </ul>
                 </div>
             
@@ -96,28 +93,202 @@
                 -order-lg-1 orders this element 1st in the container if the large breakpoint is active
                 -align-self-center aligns the element to the center of its container (used to control the size of the searchbar) 
                 -ms-md-3 creates a margin with a value of 3 if the medium breakpoint is active-->
-            <input class="col-12 col-md-4 col-lg-6 order-sm-3 order-md-2 order-lg-1 align-self-center ms-md-3 header" id="search-bar" type="text">
+            <input class="col-12 col-md-4 col-lg-6 order-sm-3 order-md-2 order-lg-1 align-self-center ms-md-3 header" id="search-bar" type="text" placeholder="&#128270;Search...">
         </div>
 
-        <div class="options-menu"></div>
-        
-        <!-- <div class="row email-list">
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
-            <p class="email-list">Various Email</p>
+        <!-- This is the container for the various list and display areas of this email interface.
+        Class declarations:
+            -row allows this element to utilize row classes
+            -g-1 creates a gap between all elements within the class-->
+        <div class="row g-1">
+            <!-- This displays the list group for the secondary menu, this element will only be visible once the large breakpoint is active
+            Class declarations:
+                -col-2 makes this element take up 2 column spaces by default
+                -d-none makes this element hidden from the user by default
+                -d-lg-block makes this element visible to the user once the large breakpoint is active
+                -text-center centers the text on screen
+                -list-group turns this element into a list group -->
+            <ul class="col-2 d-none d-lg-block text-center list-group">
+                <!-- Displays the dropdown menu elements
+                    Class declarations:
+                        -list-group-item makes the element an option in the list group
+                        -list-group-item-action makes the element interactive to the user
+                        -list-group-dark sets a predefined color scheme for the element
+                        -p-4 creates a padding around the element-->
+                <li class="list-group-item list-group-item-action list-group-item-dark p-4">Inbox</li>
+                <li class="list-group-item list-group-item-action list-group-item-dark p-4">Sent</li>
+                <li class="list-group-item list-group-item-action list-group-item-dark p-4">Drafts</li>
+                <li class="list-group-item list-group-item-action list-group-item-dark p-4">Spam</li>
+                <li class="list-group-item list-group-item-action list-group-item-dark p-4">Trash</li>
+            </ul>
+            
+            <!-- This displays the email list container
+                Class declarations:
+                    -col-12 makes this element take up 12 column spaces by default
+                    -col-md-4 makes this element take up 4 column spaces when the medium breakpoint is active
+                    -col-lg-3 makes this element take up 3 column spaces when the large breakpoint is active
+                    -overflow-auto will provide a scroll bar for the user when there are elements that flow off the email list
+                    -email-list-display is a custom class used to reference this email list in the stylesheet.
+             -->
+            <div class="col-12 col-md-4 col-lg-3 overflow-auto email-list-display">
+                <!-- This is the email list 
+                    Class declarations:
+                        -list-group turns this element into a list group -->
+                <ul class="list-group">
+                    <!-- These are the element in the email list 
+                    Class declarations:
+                        -list-group-item makes the element an option in the list group -->
+                    <li class="list-group-item">
+                        <!-- Each list item contains a div that displays a radio button for selecting which email gets displayed
+                            Class declarations:
+                                -form-check allows the element to use the various forms classes
+                                -form-check-input turns the element into an interactive input
+                                -form-check-label specifies the label the display texts for the radio button input-->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email1" checked>
+                            <label class="form-check-label" for="email1">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email2">
+                            <label class="form-check-label" for="email2">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email3">
+                            <label class="form-check-label" for="email3">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email4">
+                            <label class="form-check-label" for="email4">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email5">
+                            <label class="form-check-label" for="email5">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email6">
+                            <label class="form-check-label" for="email6">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email7">
+                            <label class="form-check-label" for="email7">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email8">
+                            <label class="form-check-label" for="email8">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email9">
+                            <label class="form-check-label" for="email9">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email10">
+                            <label class="form-check-label" for="email10">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email11">
+                            <label class="form-check-label" for="email11">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email12">
+                            <label class="form-check-label" for="email12">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email13">
+                            <label class="form-check-label" for="email13">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email14">
+                            <label class="form-check-label" for="email14">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email15">
+                            <label class="form-check-label" for="email15">Various Email</label>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="various-emails" id="email16">
+                            <label class="form-check-label" for="email16">Various Email</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- This displays the email display area
+                Class declarations:
+                    -col-7 makes this element take up 7 column spaces by default
+                    -d-none makes this element hidden from the user by default
+                    -d-md-block makes this element visible to the user once the medium breakpoint is active
+                    -text-center centers the text on screen
+                    align-self-center centers all content in the element to the center of the screen -->
+            <div class="col-8 col-lg-7 d-none d-md-block text-center align-self-center" id="email-display">Email Display Area</div>
+        </div>
 
-        </div> -->
 
-        <div class="email-display"></div>
-
-        
+        <!-- This displays the footer that will always position itself to the bottom of the page regardless of screen size
+            Class declarations:
+                -row allows this element to utilize row classes
+                -row-col-2 positions the elements 
+                -g-1 creates a gutter around the elements in the row -->
+        <div class="row g-1">
+            <!-- This displays the compose button
+                Class declarations:
+                    -col-1 makes this element take up 1 column space by default
+                    -position-absolute positions this element in a area relative to the user's viewport regardless of the webpage's position on their screen
+                    -bottom-0 aligns this element to the bottom of the screen
+                    -start-0 aligns this element to the left of the screen -->
+            <div class="col-1 position-absolute bottom-0 start-0" id="composeBTN">
+                <!-- This is compose button element
+                    Class declarations:
+                        -btn allows this element to utilize button classes
+                        -btn-primary declares this button element to utilize a pre-made design 
+                        -btn-large sets this button to a pre-defined large size-->
+                <button type="button" class="btn btn-primary btn-lg">Compose</button>
+            </div>
+            <!-- This is the reply/forward element button group
+                Class declarations:
+                    -col-3 makes this element take up 3 column spaces by default
+                    -position-absolute positions this element in a area relative to the user's viewport regardless of the webpage's position on their screen
+                    -bottom-0 aligns this element to the bottom of the screen
+                    -end-0 aligns this element to the right of the screen 
+                    -btn-group makes a button group-->
+            <div class="col-3 col-lg-2 position-absolute bottom-0 end-0 btn-group" id="reply-forward" role="group" aria-label="Reply/Forward">
+                <!-- These are the reply and forward button elements respectively
+                     Class declarations:
+                        -btn allows this element to utilize button classes
+                        -btn-primary declares this button element to utilize a pre-made design
+                        -btn-sm sets this button to a pre-defined small size -->
+                <button type="button" class="btn btn-primary btn-sm" id="reply">Reply</button>
+                <button type="button" class="btn btn-primary btn-sm" id="forward">Forward</button>
+            </div>
+        </div>
 
     </div>
     
