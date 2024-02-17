@@ -15,6 +15,7 @@
 
 .email-list-display {
     max-height: 90vh;
+    min-height: 10vh;
 }
 
 #composeBTN {
@@ -27,6 +28,25 @@
 }
 
 #email-display {
-    background-color: white;
-    color: black;
+    background-color: rgba(41, 37, 37, 0.637);
+    color: rgba(255, 255, 255, 0.822);
+    min-height: 500px;
+    height: 90vh;
+    border-radius: 50px;
+    box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.233);
+}
+
+.newEmailHeader {
+    border-color: transparent;
+    border-bottom-color: rgb(0, 0, 0);
+    color: grey;
+}
+
+.newEmailBody {
+    height: 50vh;
+    min-height: 50px;
+}
+
+.subjectText {
+    color: rgba(150, 147, 147, 0.616);
 }
