@@ -1,5 +1,15 @@
 /* This is the style sheet for my Bootstrap Grid Project - Email Interface */
 
+
+:root {
+    /* Declares variables for the basic colors for this UI */
+    --main-background: #28262C;
+    --secondary-background: #042a2b;
+    --text-color: #EEF0F2;
+}
+
+
+
 .main-page {
     /* Sets the basic design choices of the webpage */
     height: 100vh;
@@ -8,45 +18,63 @@
 
     overflow: hidden;
 
-    /* Change this to a variable for color */
-    background-color: rgb(61, 50, 50); 
-    color: white;
+    /* Sets the main color properties */
+    background-color: var(--main-background); 
+    color: var(--text-color);
 }
 
 .email-list-display {
+    /* Sets a min and max height for the email list */
     max-height: 90vh;
     min-height: 10vh;
 }
 
 #composeBTN {
+    /* Sets a margin along the bottom of the compose button element */
     margin-bottom: 10px;
 }
 
 #reply, #forward {
+    /* Sets a max width for the reply and forward buttons elements */
     max-width: 150px;
+
+    /* Sets a margin along the bottom of the reply and forward button elements */
     margin-bottom: 10px;
 }
 
 #email-display {
-    background-color: rgba(41, 37, 37, 0.637);
-    color: rgba(255, 255, 255, 0.822);
+    /* Sets the main color properties of the email display area*/
+    background-color: var(--secondary-background);
+    color: var(--text-color);
+    
+    /* Sets the height of the email display element and a minimum height for it */
     min-height: 500px;
     height: 90vh;
+
+    /* Sets the email display area to have rounded corners */
     border-radius: 50px;
-    box-shadow: 0px 0px 2px 3px rgba(255, 255, 255, 0.233);
+
+    /* Creates a drop shadow effect around the email display area */
+    box-shadow: 0px 0px 5px 3px var(--text-color);
 }
 
 .newEmailHeader {
+    /* Sets the boarders to transparent and then sets bottom boarder to black for the input elements*/
     border-color: transparent;
     border-bottom-color: rgb(0, 0, 0);
+
+    /* Sets the color of the text in the input boxes to grey */
     color: grey;
 }
 
 .newEmailBody {
+    /* Sets the height of the modal and a minimum height for it */
     height: 50vh;
     min-height: 50px;
 }
 
+
 .subjectText {
-    color: rgba(150, 147, 147, 0.616);
+    /* Sets the color of the text */
+    color: rgb(66, 66, 66);
 }

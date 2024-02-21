@@ -17,10 +17,6 @@
 </head>
 <body>
     <!-- Things to do:
-        Once finished, add a branched called "Comments" and delete class declarations comments, they take up a lot of space and make the code harder to read
-            Still I want to keep them if I need to remember exactly how I created this interface.
-
-
         Do Final checks that all breakpoints and elements are correct and fit the guidelines of the project.
     -->
 
@@ -52,13 +48,13 @@
                         -btn allows this element to utilize button classes
                         -btn-dark declares this button element to utilize a pre-made dark design
                         -dropdown-toggle sets this button to open a toggle menu when clicked -->
-                    <button class="btn btn-dark dropdown-toggle" type="button" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-dark  dropdown-toggle" type="button" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
                         Menu
                     </button>
                     <!-- Displays the dropdown menu elements
                     Class declarations:
                         -dropdown-menu makes the element an option in the dropdown menu -->
-                    <ul class="dropdown-menu" aria-labelledby="menu">
+                    <ul class="dropdown-menu-dark dropdown-menu" aria-labelledby="menu">
                         <!-- Displays all the elements in the dropdown menu
                             Class declarations:
                                 -dropdown-item makes the element an option in the dropdown menu-->
@@ -149,8 +145,9 @@
                 <ul class="list-group">
                     <!-- These are the element in the email list 
                     Class declarations:
+                        -list-group-dark sets a predefined color scheme for the element
                         -list-group-item makes the element an option in the list group -->
-                    <li class="list-group-item">
+                    <li class="list-group-item-dark list-group-item">
                         <!-- Each list item contains a div that displays a radio button for selecting which email gets displayed
                             Class declarations:
                                 -form-check allows the element to use the various forms classes
@@ -170,7 +167,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item-dark list-group-item">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="various-emails" id="email2">
                             <div class="container-fluid">
@@ -180,7 +177,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="list-group-item">
+                    <li class="list-group-item-dark list-group-item">
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="various-emails" id="email3">
                             <div class="container-fluid">
@@ -242,9 +239,9 @@
                 <!-- This is compose button element
                     Class declarations:
                         -btn allows this element to utilize button classes
-                        -btn-primary declares this button element to utilize a pre-made design 
+                        -btn-secondary declares this button element to utilize a pre-made design 
                         -btn-large sets this button to a pre-defined large size-->
-                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#new-email">Compose</button>
+                <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#new-email">Compose</button>
             </div>
             <!-- This is the reply/forward element button group
                 Class declarations:
@@ -257,10 +254,10 @@
                 <!-- These are the reply and forward button elements respectively
                      Class declarations:
                         -btn allows this element to utilize button classes
-                        -btn-primary declares this button element to utilize a pre-made design
+                        -btn-secondary declares this button element to utilize a pre-made design
                         -btn-sm sets this button to a pre-defined small size -->
-                <button type="button" class="btn btn-primary btn-sm" id="reply" data-bs-toggle="modal" data-bs-target="#new-email">&#8617; Reply</button>
-                <button type="button" class="btn btn-primary btn-sm" id="forward" data-bs-toggle="modal" data-bs-target="#new-email">&#8618; Forward</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="reply" data-bs-toggle="modal" data-bs-target="#new-email">&#11170; Reply</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="forward" data-bs-toggle="modal" data-bs-target="#new-email">&#11171; Forward</button>
             </div>
         </div>
 
