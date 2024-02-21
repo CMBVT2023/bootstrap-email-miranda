@@ -24,50 +24,21 @@
     <div class="container-fluid overflow-hidden main-page">
 
             <!-- This is the header container, all elements within this container have an additional class
-                    called "header" to allow them all to be referenced at once in the CSS file.
-                Class declarations:
-            -row allows this element to utilize row classes
-            -justify-content-start aligns all elements to the left of the page
-            -align-content-center aligns all elements to the center of the container
-            -gap-2 creates a vertical gap between elements
-            -g-0 removes the gutter that is applied by default between elements  -->
+                    called "header" to allow them all to be referenced at once in the CSS file. -->
         <div class="row justify-content-start align-content-center gap-2 g-0 header">
 
-            <!-- Container for the menu button and its various options.
-            Class declarations: 
-                -col-2 makes this element take up 2 column spaces in the container
-                -col-md-1 makes this element take up 1 column space in the container if the medium breakpoint is active
-                -col-sm-1 makes this element take up 1 column space in the container if the small breakpoint is active
-                -order-sm-1 orders this element 1st in the container if the small breakpoint is active
-                -order-md-1 orders this element 1st in the container if the medium breakpoint is active
-                -d-lg-none makes this element invisible if the large breakpoint is active 
-                -dropdown allows the div to house a dropdown menu button and its elements-->
+            <!-- Container for the menu button and its various options. -->
                 <div class="col-2 col-md-1 order-sm-1 order-md-1 d-lg-none align-self-center dropdown">
-                    <!-- Displays the menu button within the container.
-                    Class declarations: 
-                        -btn allows this element to utilize button classes
-                        -btn-dark declares this button element to utilize a pre-made dark design
-                        -dropdown-toggle sets this button to open a toggle menu when clicked -->
+                    <!-- Displays the menu button within the container. -->
                     <button class="btn btn-dark  dropdown-toggle" type="button" id="menu" data-bs-toggle="dropdown" aria-expanded="false">
                         Menu
                     </button>
-                    <!-- Displays the dropdown menu elements
-                    Class declarations:
-                        -dropdown-menu makes the element an option in the dropdown menu -->
+                    <!-- Displays the dropdown menu elements. -->
                     <ul class="dropdown-menu-dark dropdown-menu" aria-labelledby="menu">
-                        <!-- Displays all the elements in the dropdown menu
-                            Class declarations:
-                                -dropdown-item makes the element an option in the dropdown menu-->
+                        <!-- Displays all the elements in the dropdown menu. -->
                         <li>
                             <a class="dropdown-item" href="#">Inbox</a>
-                            <!-- Displays a badge with additional information 
-                                Class declaration:
-                                    -position-absolute positions this element in a area relative to the user's viewport regardless of the webpage's position on their screen
-                                    -bottom-0 aligns this element to the bottom of the screen
-                                    -start-100 aligns this element to the right of the screen
-                                    -translate-middle positions the object based on the middle of the element
-                                    -rounded-pill displays the element with a pre-made design
-                                    -bg-danger displays the element with a pre-made design-->
+                            <!-- Displays a badge with additional information for the Inbox button element. -->
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
                         </li>
                         <li><a class="dropdown-item" href="#">Sent</a></li>
@@ -77,49 +48,18 @@
                     </ul>
                 </div>
             
-            <!-- Displays the website's title.
-            Class declarations:
-                -col-9 makes this element take up 9 column spaces in the container
-                -col-md-6 makes this element take up 6 column spaces in the container if the medium breakpoint is active
-                -col-lg-5 makes this element take up 5 column spaces in the container if the large breakpoint is active
-                -order-sm-2 orders this element 2nd in the container if the small breakpoint is active
-                -order-md-3 orders this element 3rd in the container if the medium breakpoint is active
-                -order-lg-2 orders this element 2nd in the container if the large breakpoint is active
-                -text-center centers the text on screen -->
+            <!-- Displays the website's title. -->
             <h1 class="col-9 col-md-5 col-lg-5 order-sm-2 order-md-3 order-lg-2 text-center header" id="website-title">Email Website Title</h1>
             
-            <!-- Displays the website's search bar.
-            Class declarations:
-                -col-12 makes this element take up 12 column spaces in the container
-                -col-md-4 makes this element take up 4 column spaces in the container if the medium breakpoint is active
-                -col-lg-5 makes this element take up 5 column spaces in the container if the large breakpoint is active
-                -order-sm-3 orders this element 3rd in the container if the small breakpoint is active
-                -order-md-2 orders this element 2nd in the container if the medium breakpoint is active
-                -order-lg-1 orders this element 1st in the container if the large breakpoint is active
-                -align-self-center aligns the element to the center of its container (used to control the size of the searchbar) 
-                -ms-md-3 creates a margin with a value of 3 if the medium breakpoint is active-->
+            <!-- Displays the website's search bar. -->
             <input class="col-12 col-md-4 col-lg-6 order-sm-3 order-md-2 order-lg-1 align-self-center ms-md-3 header" id="search-bar" type="text" placeholder="&#128270;Search...">
         </div>
 
-        <!-- This is the container for the various list and display areas of this email interface.
-        Class declarations:
-            -row allows this element to utilize row classes
-            -g-1 creates a gap between all elements within the class-->
+        <!-- This is the container for the various list and display areas of this email interface. -->
         <div class="row g-1">
-            <!-- This displays the list group for the secondary menu, this element will only be visible once the large breakpoint is active
-            Class declarations:
-                -col-2 makes this element take up 2 column spaces by default
-                -d-none makes this element hidden from the user by default
-                -d-lg-block makes this element visible to the user once the large breakpoint is active
-                -text-center centers the text on screen
-                -list-group turns this element into a list group -->
+            <!-- This displays the list group for the secondary menu, this element will only be visible once the large breakpoint is active. -->
             <ul class="col-2 d-none d-lg-block text-center list-group">
-                <!-- Displays the dropdown menu elements
-                    Class declarations:
-                        -list-group-item makes the element an option in the list group
-                        -list-group-item-action makes the element interactive to the user
-                        -list-group-dark sets a predefined color scheme for the element
-                        -p-4 creates a padding around the element-->
+                <!-- Displays the dropdown menu elements. -->
                 <li class="list-group-item list-group-item-action list-group-item-dark p-4">
                     Inbox
                     <span class="position-absolute top-50 end-0 translate-middle badge rounded-pill bg-danger">99+</span>
@@ -130,37 +70,19 @@
                 <li class="list-group-item list-group-item-action list-group-item-dark p-4">Trash</li>
             </ul>
             
-            <!-- This displays the email list container
-                Class declarations:
-                    -col-12 makes this element take up 12 column spaces by default
-                    -col-md-4 makes this element take up 4 column spaces when the medium breakpoint is active
-                    -col-lg-3 makes this element take up 3 column spaces when the large breakpoint is active
-                    -overflow-auto will provide a scroll bar for the user when there are elements that flow off the email list
-                    -email-list-display is a custom class used to reference this email list in the stylesheet.
-             -->
+            <!-- This displays the email list container. -->
             <div class="col-12 col-md-4 col-lg-3 overflow-auto email-list-display">
-                <!-- This is the email list 
-                    Class declarations:
-                        -list-group turns this element into a list group -->
+                <!-- This is the email list. -->
                 <ul class="list-group">
-                    <!-- These are the element in the email list 
-                    Class declarations:
-                        -list-group-dark sets a predefined color scheme for the element
-                        -list-group-item makes the element an option in the list group -->
+                    <!-- These are the element in the email list. -->
                     <li class="list-group-item-dark list-group-item">
-                        <!-- Each list item contains a div that displays a radio button for selecting which email gets displayed
-                            Class declarations:
-                                -form-check allows the element to use the various forms classes
-                                -form-check-input turns the element into an interactive input-->
+                        <!-- Each list item contains a div that displays a radio button for selecting which email gets displayed. -->
                         <div class="form-check">
                             <input class="form-check-input" checked type="radio" name="various-emails" id="email1">
                             <div class="container-fluid">
-                                <!-- Each individual list item has a label that contains the email title, a subject, and a email body
-                                    Class declarations:
-                                        -form-check-label specifies the label the display texts for the radio button input
-                                        -fs-5 changes text font size
-                                        -m-0 removes all padding around an element
-                                        -text-truncate causes any overflow of text to be obscured by dots-->
+                                <!-- Each individual list item has a label that contains the email title, a paragraph tag that contains the subject, 
+                                    and another paragraph tag that contains the email body. -->
+
                                 <label class="form-check-label fs-5" for="email1"><strong>Giveaway.com</strong></label>
                                 <p class="m-0"><strong class="subjectText">Subject:</strong> Trip Giveaway</p>
                                 <p class="text-truncate">Have you always wanted to go to a far away place but never had the chance. Enter this contest for a chance to win the trip of a life time.</p>
@@ -189,32 +111,19 @@
                     </li>
                 </ul>
             </div>
-            <!-- This displays the email display area
-                Class declarations:
-                    -col makes this element take up all available space
-                    -d-none makes this element hidden from the user by default
-                    -d-md-block makes this element visible to the user once the medium breakpoint is active
-                    -m-1 creates a margin around this element
-                    -overflow-auto will provide a scroll bar for the user when text flows past the maximum display area
-                    -p-3 creates a padding on the inner part of the element-->
+
+            <!-- This displays the email display area. -->
             <div class="col d-flex d-none d-md-block m-1 overflow-auto p-3" id="email-display">
-                <!-- Displays the email title 
-                    Class declarations:
-                        -fs-1 changes the font size-->
+                <!-- Displays the email title. -->
                 <h1 class="fs-1">Win a Free Trip</h1>
 
-                <!-- Displays the email's subject -->
+                <!-- Displays the email's subject. -->
                 <h4>Subject: Trip Giveaway</h4>
 
-                <!-- Displays the email's main contents
-                    Class declarations:
-                        -pt-3 creates a padding above the element only
-                        -->
+                <!-- Displays the email's main contents. -->
                 <p class="pt-3">Have you always wanted to go to a far away place but never had the chance. Enter this contest for a chance to win the trip of a life time.</p>
 
-                <!-- Displays the email's signature
-                    Class declarations:
-                        -pt-3 creates a padding above the element only-->
+                <!-- Displays the email's signature. -->
                 <h4 class="pt-5">
                     Sincerely, <br>
                     The team at Giveaway.com
@@ -223,67 +132,28 @@
         </div>
 
 
-        <!-- This displays the footer that will always position itself to the bottom of the page regardless of screen size
-            Class declarations:
-                -row allows this element to utilize row classes
-                -row-col-2 positions the elements 
-                -g-1 creates a gutter around the elements in the row -->
+        <!-- This displays the footer that will always position itself to the bottom of the page regardless of screen size. -->
         <div class="row g-1">
-            <!-- This displays the compose button
-                Class declarations:
-                    -col-1 makes this element take up 1 column space by default
-                    -position-absolute positions this element in a area relative to the user's viewport regardless of the webpage's position on their screen
-                    -bottom-0 aligns this element to the bottom of the screen
-                    -start-0 aligns this element to the left of the screen -->
+            <!-- This displays the compose button. -->
             <div class="col-1 position-absolute bottom-0 start-0" id="composeBTN">
-                <!-- This is compose button element
-                    Class declarations:
-                        -btn allows this element to utilize button classes
-                        -btn-secondary declares this button element to utilize a pre-made design 
-                        -btn-large sets this button to a pre-defined large size-->
+                <!-- This declares the button element for the compose button. -->
                 <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#new-email">Compose</button>
             </div>
-            <!-- This is the reply/forward element button group
-                Class declarations:
-                    -col-3 makes this element take up 3 column spaces by default
-                    -position-absolute positions this element in a area relative to the user's viewport regardless of the webpage's position on their screen
-                    -bottom-0 aligns this element to the bottom of the screen
-                    -end-0 aligns this element to the right of the screen 
-                    -btn-group makes a button group-->
+            <!-- This is the reply/forward element button group. -->
             <div class="col-3 col-lg-2 position-absolute bottom-0 end-0 btn-group" id="reply-forward" role="group" aria-label="Reply/Forward">
-                <!-- These are the reply and forward button elements respectively
-                     Class declarations:
-                        -btn allows this element to utilize button classes
-                        -btn-secondary declares this button element to utilize a pre-made design
-                        -btn-sm sets this button to a pre-defined small size -->
+                <!-- These are the reply and forward button elements respectively. -->
                 <button type="button" class="btn btn-secondary btn-sm" id="reply" data-bs-toggle="modal" data-bs-target="#new-email">&#11170; Reply</button>
                 <button type="button" class="btn btn-secondary btn-sm" id="forward" data-bs-toggle="modal" data-bs-target="#new-email">&#11171; Forward</button>
             </div>
         </div>
 
-        <!-- New email form, a modal that appears once the user clicks the compose, reply, or forward button
-            Class declarations:
-                -modal allows this element to use modal classes
-                -fade added a fade animation as the modal comes into view 
-                -modalCompose is the custom class used to reference this element-->
+        <!-- New email form, a modal that appears once the user clicks the compose, reply, or forward button. -->
         <div class="modal fade modalCompose" id="new-email" tabindex="-1" aria-labelledby="newEmail" aria-hidden="true">
-            <!-- Class Declaration:
-                -modal-dialog makes the elements within the div appear in the modal
-                -modal-lg increases the size of the modal that is displayed on screen -->
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <!-- This is the modal header.
-                        Class declarations:
-                            -d-flex makes this element use flexbox for positioning elements
-                            -flex-column positions the elements in a column
-                            -modal-header declares this element as a modal-header -->
+                    <!-- This is the modal header. -->
                     <div class="d-flex flex-column gap-2 modal-header">
-                        <!-- The two text boxes for the recipient email and subject.
-                            Class declarations:
-                            -w-100 sets the textboxes to take up the entire width of their container 
-                            -fs-4 changes the size of the text for the textbox
-                            -pt-2 adds padding to the top of the element 
-                            -newEmailHeader is the custom class used to reference these element-->
+                        <!-- The two text boxes for the recipient email and subject. -->
                         <div class="form-floating w-100">
                             <input type="email" class="form-control w-100 fs-4 newEmailHeader" id="emailForm" placeholder="Email">
                             <label class="w-100 newEmailHeader" for="emailForm">Email</label>
