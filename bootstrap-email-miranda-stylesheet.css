@@ -9,7 +9,6 @@
 }
 
 
-
 .main-page {
     /* Sets the basic design choices of the webpage */
     height: 100vh;
@@ -29,7 +28,7 @@
     min-height: 10vh;
 }
 
-#composeBTN {
+#compose {
     /* Sets a margin along the bottom of the compose button element */
     margin-bottom: 10px;
 }

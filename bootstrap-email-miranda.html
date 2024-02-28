@@ -16,16 +16,12 @@
     <link rel="stylesheet" href="./bootstrap-email-miranda-stylesheet.css">
 </head>
 <body>
-    <!-- Things to do:
-        Do Final checks that all breakpoints and elements are correct and fit the guidelines of the project.
-    -->
-
 
     <div class="container-fluid overflow-hidden main-page">
 
             <!-- This is the header container, all elements within this container have an additional class
-                    called "header" to allow them all to be referenced at once in the CSS file. -->
-        <div class="row justify-content-start align-content-center gap-2 g-0 header">
+                    called "header" to allow them all to be referenced together in the CSS file. -->
+        <div class="row justify-content-start align-content-center gap-2 g-0">
 
             <!-- Container for the menu button and its various options. -->
                 <div class="col-2 col-md-1 order-sm-1 order-md-1 d-lg-none align-self-center dropdown">
@@ -49,10 +45,10 @@
                 </div>
             
             <!-- Displays the website's title. -->
-            <h1 class="col-9 col-md-5 col-lg-5 order-sm-2 order-md-3 order-lg-2 text-center header" id="website-title">Email Website Title</h1>
+            <h1 class="col-9 col-md-5 col-lg-5 order-sm-2 order-md-3 order-lg-2 text-center" id="website-title">Email Website Title</h1>
             
             <!-- Displays the website's search bar. -->
-            <input class="col-12 col-md-4 col-lg-6 order-sm-3 order-md-2 order-lg-1 align-self-center ms-md-3 header" id="search-bar" type="text" placeholder="&#128270;Search...">
+            <input class="col-12 col-md-4 col-lg-6 order-sm-3 order-md-2 order-lg-1 align-self-center ms-md-3" id="search-bar" type="text" placeholder="&#128270;Search...">
         </div>
 
         <!-- This is the container for the various list and display areas of this email interface. -->
@@ -135,7 +131,7 @@
         <!-- This displays the footer that will always position itself to the bottom of the page regardless of screen size. -->
         <div class="row g-1">
             <!-- This displays the compose button. -->
-            <div class="col-1 position-absolute bottom-0 start-0" id="composeBTN">
+            <div class="col-1 position-absolute bottom-0 start-0" id="compose">
                 <!-- This declares the button element for the compose button. -->
                 <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#new-email">Compose</button>
             </div>
